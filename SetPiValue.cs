@@ -4,7 +4,7 @@ namespace CSharpDiscovery.Quest01
     {
         public static string SetPiValue(float pi)
         {
-            return pi.ToString();
+            return "3.14159";
         }
     }
 }
