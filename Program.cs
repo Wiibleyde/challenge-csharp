@@ -7,7 +7,7 @@ namespace TestCSharp
     {
         static void Main(string[] args)
         {
-            Console.WriteLine(HelloWorld_Exercice.HelloWorld());
+            Console.WriteLine(CSharpDiscovery.Quest01.SetPiValue_Exercice.SetPiValue(000000000000000000000000));
         }
     }
 }
