@@ -25,5 +25,10 @@ namespace CSharpDiscovery.Quest03
         {
             return string.Format(GoogleMapsUrlTemplate, Name.Replace(" ", "+"), Latitude, Longitude);
         }
+
+        public override string ToString()
+        {
+            return $"{Name} (Lat={Latitude}, Long={Longitude})";
+        }
     }
 }
