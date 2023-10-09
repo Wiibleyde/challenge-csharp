@@ -30,5 +30,36 @@ namespace CSharpDiscovery.Quest03
         {
             return $"{Name} (Lat={Latitude}, Long={Longitude})";
         }
+
+        private double CalculateDistance(double lat1, double lon1, double lat2, double lon2)
+        {
+            const double radiusOfEarthKm = 6371.0; 
+
+            double dLat = DegreeToRadian(lat2 - lat1);
+            double dLon = DegreeToRadian(lon2 - lon1);
+
+            double a = Math.Sin(dLat / 2) * Math.Sin(dLat / 2) +
+                       Math.Cos(DegreeToRadian(lat1)) * Math.Cos(DegreeToRadian(lat2)) *
+                       Math.Sin(dLon / 2) * Math.Sin(dLon / 2);
+
+            double c = 2 * Math.Atan2(Math.Sqrt(a), Math.Sqrt(1 - a));
+
+            return radiusOfEarthKm * c;
+        }
+        
+        private double DegreeToRadian(double degree)
+        {
+            return degree * Math.PI / 180.0;
+        }
+
+        public int GetDistance(PointOfInterest other)
+        {
+            return (int)Math.Round(CalculateDistance(Latitude, Longitude, other.Latitude, other.Longitude));
+        }
+
+        public static int GetDistance(PointOfInterest p1, PointOfInterest p2)
+        {
+            return (int)Math.Round(p1.CalculateDistance(p1.Latitude, p1.Longitude, p2.Latitude, p2.Longitude));
+        }
     }
 }
