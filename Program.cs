@@ -1,14 +1,15 @@
 ﻿using System;
 using CSharpDiscovery.Quest02;
-
 namespace TestCSharp
 {
     class Program
     {
-        static void Main(string[] args)
+        static void Main(string[] str)
         {
-            var array = new int[] { 3, 24, 13, 4, 40 };
-            Console.WriteLine(string.Join(", ", SortTable_Exercice.SortTable(array)));
+            var tab = new int[] { 20, 35, 12, 56, 35, 76 };
+            Console.WriteLine(FindLastIndex_Exercice.FindLastIndex(tab, 12));
+            Console.WriteLine(FindLastIndex_Exercice.FindLastIndex(tab, 35));
+            Console.WriteLine(FindLastIndex_Exercice.FindLastIndex(tab, 66));
         }
     }
 }
