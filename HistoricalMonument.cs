@@ -4,6 +4,11 @@ namespace CSharpDiscovery.Quest03
     {
         public int BuildYear { get; set; }
 
+        public HistoricalMonument()
+        {
+            
+        }
+
         public HistoricalMonument(string name, double latitude, double longitude, int buildYear) : base(name, latitude, longitude)
         {
             BuildYear = buildYear;
