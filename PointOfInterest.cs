@@ -20,5 +20,10 @@ namespace CSharpDiscovery.Quest03
             Latitude = latitude;
             Longitude = longitude;
         }
+
+        public string GetGoogleMapsUrl()
+        {
+            return string.Format(GoogleMapsUrlTemplate, Name.Replace(" ", "+"), Latitude, Longitude);
+        }
     }
 }
