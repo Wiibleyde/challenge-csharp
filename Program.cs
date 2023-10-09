@@ -7,7 +7,7 @@ namespace TestCSharp
     {
         static void Main(string[] args)
         {
-            Console.WriteLine(FromStringToDateTime_Exercice.FromStringToDateTime("21/12/2021 18:33"));
+            Console.WriteLine(FromStringToDateTime_Exercice.FromStringToDateTime("21/12/2021 18h33"));
         }
     }
 }
