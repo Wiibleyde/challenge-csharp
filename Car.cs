@@ -16,7 +16,7 @@ namespace CSharpDiscovery.Quest04
 
         public override string ToString()
         {
-            return $"{Brand} {Model} ({Color})";
+            return $"{Color} {Brand} {Model}";
         }
     }
 }
