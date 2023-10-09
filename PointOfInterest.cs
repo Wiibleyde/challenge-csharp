@@ -38,15 +38,13 @@ namespace CSharpDiscovery.Quest03
             double dLat = DegreeToRadian(lat2 - lat1);
             double dLon = DegreeToRadian(lon2 - lon1);
 
-            double a = Math.Sin(dLat / 2) * Math.Sin(dLat / 2) +
-                       Math.Cos(DegreeToRadian(lat1)) * Math.Cos(DegreeToRadian(lat2)) *
-                       Math.Sin(dLon / 2) * Math.Sin(dLon / 2);
+            double a = Math.Sin(dLat / 2) * Math.Sin(dLat / 2) + Math.Cos(DegreeToRadian(lat1)) * Math.Cos(DegreeToRadian(lat2)) * Math.Sin(dLon / 2) * Math.Sin(dLon / 2);
 
             double c = 2 * Math.Atan2(Math.Sqrt(a), Math.Sqrt(1 - a));
 
             return radiusOfEarthKm * c;
         }
-        
+
         private double DegreeToRadian(double degree)
         {
             return degree * Math.PI / 180.0;
